@@ -52,4 +52,12 @@ return require('packer').startup(function(use)
           vim.cmd('colorscheme gruvbox')
       end
   }
+  use {
+      'nvim-lualine/lualine.nvim',
+      required = { 'nvim-tree/nvim-web-devicons', opt = true },
+      config = function()
+          require('lualine').setup()
+      end
+  }
+  use 'APZelos/blamer.nvim'
 end)
